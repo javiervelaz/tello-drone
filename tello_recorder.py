@@ -72,7 +72,8 @@ class GrabadorTello:
         )
 
         # intentar codec H.264, fallback mp4v
-        for codec in ["avc1", "mp4v", "XVID"]:
+        #for codec in ["avc1", "mp4v", "XVID"]:
+        for codec in ["mp4v", "XVID", "avc1"]:
             fourcc = cv2.VideoWriter_fourcc(*codec)
             writer = cv2.VideoWriter(
                 self.ruta_video, fourcc,
